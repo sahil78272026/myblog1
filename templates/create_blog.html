@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Create Post
+{%endblock%}
+
+{% block body %}
+<div class="container mb-3">
+    <h1 class="text-center">Create Post</h2>
+
+        <form class="row g-3" method="post" action="#">
+            {% csrf_token %}
+            <div class="col-md-8">
+                <input type="name" class="form-control" id="title" name="title" placeholder="Enter One Word Title to auto-fetch relevant image">
+            </div>
+           
+            <div class="col-md-8">
+                <input type="name" class="form-control" id="intro" name="intro" placeholder="Enter Short Description">
+            </div>
+
+            <div class="col-md-8">
+                <textarea class="form-control" rows="12" name ='description' placeholder="Express Yourself here"></textarea>
+            </div>
+
+            <div class='col-md-8'>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+</div>
+{%endblock%}

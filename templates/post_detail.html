@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Post Detail
+{%endblock%}
+
+{% block body %}
+
+<div class="col">
+    
+        <div class="card-body">
+            <p class="card-text"><b>{{post.title}}</b></p>
+            <div class="d-flex justify-content-between align-items-center">
+                <small class="text-muted">added on {{post.date}}</small>
+            </div>
+        </div>    
+        <img src="https://source.unsplash.com/random/anyxany/?{{post.title}}" width="150" height="170" />
+        <p class="card-text">{{post.description}}</p>
+</div>
+
+{% endblock %}
