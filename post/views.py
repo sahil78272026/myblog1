@@ -39,12 +39,7 @@ def contact(request):
        contact.save()
        messages.success(request, 'Congrats! You have been heard !! We"ll reach you shortly.') ## sending alert message
        # Printing request objects available methods , Not related to the project but practice
-       print(f"printing request : ",type(request))
-       print(f"printing request : ",request.scheme)
-       print(f"printing request : ",request.body)
-       print(f"printing request : ",request.path)
-       print(f"printing request : ",request.path_info)
-       print(f"printing request : ",request.method)
+      
 
     return render (request , 'contact.html')
    # return HttpResponse("This is contact")
